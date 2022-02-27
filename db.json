@@ -1,0 +1,33 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      " message": "Home page created",
+      " atttention": true,
+      " date": "20-2-2022",
+      " developer": "Adil Altaf"
+    },
+
+    {
+      "id": 2,
+      "message": "Navbar created ",
+      "attention": false,
+      "date": "27-2-2022",
+      "developer": "Sijad Khan"
+    },
+    {
+      "id": "3",
+      "message ": "Register Form created ",
+      " attention": false,
+      "date": "11-2-2022",
+      "developer": "Ahmad Faraz"
+    }
+  ],
+  "Developer": [
+    {
+      "id": 1,
+      "firstName": "Sijad",
+      "lastName": "Khan"
+    }
+  ]
+}
