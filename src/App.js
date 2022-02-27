@@ -1,11 +1,17 @@
-import React from "react";
-import "./style.css";
+import React, { Fragment, useEffect } from 'react';
+import './style.css';
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
+import SearchBar from './components/layout/SearchBar';
 
-export default function App() {
+const App = () => {
+  useEffect(() => {
+    M.AutoInit();
+  }, []);
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <Fragment>
+      <SearchBar />
+    </Fragment>
   );
-}
+};
+export default App;
