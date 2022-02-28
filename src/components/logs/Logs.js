@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import LogItem from './LogItems';
+import LogItem from './LogItem';
 
 const Logs = () => {
-  const { logs, Setlogs } = useState('');
+  const { logs, Setlogs } = useState([]);
   const { loading, setLoading } = useState(false);
 
   useEffect(() => {
