@@ -9,10 +9,11 @@ const App = () => {
   useEffect(() => {
     M.AutoInit();
   }, []);
+  
   return (
     <Fragment>
       <SearchBar />
-      <div>
+      <div className='container'>
         <Logs />
       </div>
     </Fragment>

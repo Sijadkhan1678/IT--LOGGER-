@@ -1,7 +1,7 @@
 {
   "logs": [
     {
-      "id": 1,
+      "id": "1",
       " message": "Home page created",
       " atttention": true,
       " date": "20-2-2022",
@@ -9,7 +9,7 @@
     },
 
     {
-      "id": 2,
+      "id": "2",
       "message": "Navbar created ",
       "attention": false,
       "date": "27-2-2022",
@@ -25,7 +25,7 @@
   ],
   "Developer": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Sijad",
       "lastName": "Khan"
     }
