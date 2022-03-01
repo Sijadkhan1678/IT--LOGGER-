@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LogItem from './LogItem';
 
 const Logs = () => {
-  const { logs, setLogs } = useState(null);
+  const { logs, setLogs } = useState([]);
   const { loading, setLoading } = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Logs = () => {
       <li className="collection-header">
         <h4 className="text-center"> Developer Logs </h4>
       </li>
-      {!loading && logs === null ? (
+      {!loading && logs.length === 0 ? (
         <p>there are currently no developer</p>
       ) : (
         logs.map((log) => <LogItem key={log.id} log={log} />)
