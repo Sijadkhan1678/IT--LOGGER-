@@ -2,12 +2,12 @@ import React from 'react';
 
 const SearchBar = () => {
   return (
-    <nav className="deep-purple darken-3">
+    <nav className="deep-tomato darken-3">
       <div className="nav-wrapper">
         <form>
           <div className="input-field">
             <input id="search" type="search" />
-            <label className="label-icon" for="search">
+            <label className="label-icon" htmlFor="search">
               <i className="material-icons">search</i>
             </label>
             <i className="material-icons">close</i>

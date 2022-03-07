@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import LogItem from './LogItem';
 
 const Logs = () => {
-  const { logs, setLogs } = useState([]);
-  const { loading, setLoading } = useState(false);
+  const [ logs, setLogs ] = useState([]);
+  const [ loading, setLoading ] = useState(false);
 
   useEffect(() => {
     getLogs();
   }, []);
+
   const getLogs = async () => {
     setLoading(true);
     const res = await fetch('/logs');
     const data = await res.json();
-    console.log(data.id);
+    
     setLogs(data);
     setLoading(false);
   };
@@ -25,7 +26,7 @@ const Logs = () => {
       {!loading && logs.length === 0 ? (
         <p>there are currently no developer</p>
       ) : (
-        logs.map((log) => <LogItem key={log.id} log={log} />)
+        logs.map((log) =><div> <LogItem key={log.id} log={log} /></div>)
       )}
     </ul>
   );
