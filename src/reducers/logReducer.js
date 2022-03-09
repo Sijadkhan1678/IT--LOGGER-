@@ -1,5 +1,5 @@
 
-import {ADD_LOG,GET_LOGS,DELETE_LOG,UPDATE_LOG,SET_CURRENT,CLEAR_CURRENT,LOADING,LOGS_ERROR} form '../../types'
+import {ADD_LOG,GET_LOGS,DELETE_LOG,UPDATE_LOG,SET_CURRENT,CLEAR_CURRENT,SET_LOADING,LOGS_ERROR} from './types'
 
 const initialState ={
    logs: null,
@@ -29,10 +29,9 @@ export default logReducer = (state=initialState,action)=>{
         logs: [...state.logs,action.payload]
    
    }
+   
    case UPDATE_LOG:
-   return {
-       
-       ...state,
+
        return {
        ...state,
        logs:  state.logs.id=== paload.id ? (action.payload) : (logs)
@@ -46,7 +45,7 @@ export default logReducer = (state=initialState,action)=>{
       
       
       }
-      case SET_CURRENT :
+      case SET_CURRENT:
       return {
       ...state,
       current: action.payload
@@ -58,7 +57,7 @@ export default logReducer = (state=initialState,action)=>{
         current:null
       }
        
-       case LOADING:
+       case  SET_LOADING:
        return {
        ...state,
        loading: true
@@ -66,11 +65,11 @@ export default logReducer = (state=initialState,action)=>{
        }
         
    
-   }
    
-   }
+   
+      
 
 }
-
+}
 
 
