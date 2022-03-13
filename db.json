@@ -7,7 +7,6 @@
       " date": "20-2-2022",
       " developer": "Adil Altaf"
     },
-
     {
       "id": 1,
       "message": "Navbar created ",
@@ -21,20 +20,25 @@
       " attention": false,
       "date": "11-2-2022",
       "developer": "Ahmad Faraz"
+    },
+    
+    {
+      "id": 8,
+      "message": "user component created",
+      "attention": true,
+      " developer": "waqar khan"
     }
   ],
   "Developer": [
-  {
-  
-  "id" : 0,
-  "firstName" : "Adil", 
-  "lastName" : "Altaf"
-  },
+    {
+      "id": 0,
+      "firstName": "Adil",
+      "lastName": "Altaf"
+    },
     {
       "id": 1,
       "firstName": "Sijad",
       "lastName": "Khan"
-    },
-    
+    }
   ]
 }

@@ -1,6 +1,6 @@
 
 
-import { GET_LOGS, ADD_LOG,DELETE_LOG,UPDATE_LOG } from './types';
+import { GET_LOGS, ADD_LOG,DELETE_LOG,SET_LOADING} from './types';
 
 
 // getLogs function
@@ -8,9 +8,9 @@ import { GET_LOGS, ADD_LOG,DELETE_LOG,UPDATE_LOG } from './types';
 export const getLogs= () => async dispatch => {
 try{
    
-const res = await fetch('/logs');
+const res = await fetch('http://localhost:8000/logs');
 const data= await res.json();             
-
+console.log(data)
 dispatch({
 type: GET_LOGS,
 payload: data
@@ -94,7 +94,7 @@ export const deleteLog= id => async dispatch => {
      await fetch (`/logs/${id}`,{
      method: DELETE
      
-     })
+               })
    
    }
    catch(err){
@@ -109,11 +109,10 @@ export const deleteLog= id => async dispatch => {
 
   // loading action
 
-  const loading = () => dispatch => {
+ export const setLoading = () => dispatch => {
         
      dispatch({
-      type: LOADING,
-      payload: true
+      type: SET_LOADING,
 
      })
 
