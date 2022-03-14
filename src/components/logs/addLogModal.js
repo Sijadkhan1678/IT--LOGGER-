@@ -87,7 +87,12 @@ const onSubmit=()=>{
         
         )
         
+        
                         }
+                  
+         addLOgModal.propTypes= {
+         addLog: propTypes.func.isRequired 
+         }
         
         export default connect(null,{addLog})(AddLogModal);
 
