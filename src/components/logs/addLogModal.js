@@ -27,7 +27,8 @@ const onSubmit=()=>{
      
              }
              
-         addLog(newLog)    
+         addLog(newLog) 
+          M.toast({html:'Log added'})   
      
      setMessage('');
      setDeveloper('');

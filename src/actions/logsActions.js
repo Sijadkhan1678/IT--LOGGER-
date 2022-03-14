@@ -1,6 +1,6 @@
 
 
-import { GET_LOGS, ADD_LOG,DELETE_LOG,SET_LOADING} from './types';
+import { GET_LOGS, ADD_LOG,DELETE_LOG,SET_LOADING,LOG_ERROR} from './types';
 
 
 // getLogs function
@@ -21,7 +21,7 @@ const res = await fetch('http://localhost:8000/logs');
 catch (err){
   dispatch(
     {
-      type: LOG_ERRROR
+      type: LOG_ERROR
     }
   )
 }
@@ -34,8 +34,8 @@ catch (err){
 export const addLog= log => async dispatch => {
 
 try {
-  const res= await fetch('/logs',{
-       method: POST,
+  const res= await fetch('http://localhost:8000/logs',{
+       method: 'POST',
        body: JSON.stringify(log),
        headers:{
          'Content-Type': 'application-json'
@@ -71,8 +71,8 @@ export const updateLog= id => async dispatch =>{
 
 try {
 
-const res = await fetch(`/logs/${id}`,{
-    method : UPDATE,
+const res = await fetch(`http://localhost:8000/logs/${id}`,{
+    method : 'UPDATE',
     body :  id
 
 })
@@ -92,8 +92,8 @@ const data = await res.json();
 export const deleteLog= id => async dispatch => {
 
    try {
-     await fetch (`/logs/${id}`,{
-     method: DELETE
+     await fetch (`http://localhost:8000/logs/${id}`,{
+     method: 'DELETE'
      
                })
    
