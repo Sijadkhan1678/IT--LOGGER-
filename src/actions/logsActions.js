@@ -9,13 +9,14 @@ export const getLogs= () => async dispatch => {
 try{
    
 const res = await fetch('http://localhost:8000/logs');
-const data= await res.json();             
-console.log(data)
-dispatch({
-type: GET_LOGS,
-payload: data
+     const data= await res.json();             
+     console.log(data)
+    dispatch({
+    
+            type: GET_LOGS,
+            payload: data
 
-});
+           });
 }
 catch (err){
   dispatch(
@@ -37,7 +38,7 @@ try {
        method: POST,
        body: JSON.stringify(log),
        headers:{
-         'Content-Type': 'apllication-json'
+         'Content-Type': 'application-json'
        }
        
   })

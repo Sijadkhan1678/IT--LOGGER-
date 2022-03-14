@@ -1,6 +1,10 @@
 import React,{useState} from 'react';
-
 import M from 'materialize-css/dist/js/materialize.min.js';
+import {addLog} from '../../actions/logsActions';
+import propTypes from 'prop-types';
+import {connect} from 'react-redux';
+
+
 
 const AddLogModal= ()=>{
 
@@ -15,8 +19,16 @@ const onSubmit=()=>{
      }
      else
      {
+     const newLog= {
+            message,
+            atttention,
+            developer,
+           date: new Date()
      
-     console.log(message,attention,developer);
+             }
+             
+         addLog(newLog)    
+     
      setMessage('');
      setDeveloper('');
      setAttention(false)
@@ -77,7 +89,7 @@ const onSubmit=()=>{
         
                         }
         
-        export default AddLogModal;
+        export default connect(null,{addLog})(AddLogModal);
 
 
 
