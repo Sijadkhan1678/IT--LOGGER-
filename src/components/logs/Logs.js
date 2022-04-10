@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types'
 import {getLogs} from  '../../actions/logsActions'
 
-const Logs = ({log:{logs,loading}}) => {
+const Logs = ({log:{logs,loading},getLogs}) => {
  
 
   useEffect(() => {

@@ -1,5 +1,4 @@
 
-
 import {createStore,applyMiddleware} from 'redux';
 import {composeWithDevTools} from 'dev-tools-extention';
 import thunk from 'redux-thunk';
