@@ -1,10 +1,11 @@
 
 import {combineReducers} from 'redux';
-import authReducer from './authReducer';
+import logReducer from './logReducer';
 
-export const combineReducer= combineRducers(
+export const combineReducer= combineReducers(
 
 {
-       auth : authReducer 
+       log : logReducer 
 }
 )
+export default combineReducer

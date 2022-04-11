@@ -1,5 +1,5 @@
 
-import {ADD_LOG,GET_LOGS,DELETE_LOG,UPDATE_LOG,SET_CURRENT,CLEAR_CURRENT,SET_LOADING,LOGS_ERROR} from './types'
+import {ADD_LOG,GET_LOGS,DELETE_LOG,UPDATE_LOG,SET_CURRENT,CLEAR_CURRENT,SET_LOADING,LOGS_ERROR} from '../actions/types'
 
 const initialState ={
    logs: null,
@@ -10,10 +10,10 @@ const initialState ={
 
 }
 
-export default logReducer = (state=initialState,action)=>{
+export default  (state=initialState,action)=>{
    
    
-   switch (action){
+   switch (action.type){
     
     case GET_LOGS:
     return {
@@ -33,9 +33,9 @@ export default logReducer = (state=initialState,action)=>{
    case UPDATE_LOG:
 
        return {
+
        ...state,
-       logs:  state.logs.id=== paload.id ? (action.payload) : (logs)
-       
+       logs:  state.logs.map(log => state.log.id === action.payload.id ? (action.payload) : (log))
        
        }
       case DELETE_LOG:
@@ -64,7 +64,8 @@ export default logReducer = (state=initialState,action)=>{
        
        }
         
-   
+    default:
+      return state
    
    
       

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import LogItem from './LogItem';
 import Preloader from '../layout/Preloader'
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import {getLogs} from  '../../actions/logsActions'
 
 const Logs = ({log:{logs,loading},getLogs}) => {
@@ -31,9 +31,9 @@ if(loading || logs=== null){
   );
 };
 
-Log.propTypes = {
+Logs.propTypes = {
 
-log : PropTypes.object.isRequired,
+log : propTypes.object.isRequired,
 getLods : propTypes.func.isRequired
 }
 const mapStateToProps= state =>({

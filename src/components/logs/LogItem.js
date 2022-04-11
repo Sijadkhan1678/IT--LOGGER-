@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 const LogItem = ({ log }) => {
 
-const onDelete= ()={
+const onDelete= ()=>{
   deleteLog(log.id)
   M.toast({html: 'Log deleted'})
 
