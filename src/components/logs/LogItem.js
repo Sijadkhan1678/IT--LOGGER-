@@ -7,7 +7,8 @@ import {connect} from 'react-redux';
 const LogItem = ({ log }) => {
 
 const onDelete= ()=>{
-  deleteLog(log.id)
+
+  deleteLog(log)
   M.toast({html: 'Log deleted'})
 
 }
@@ -22,7 +23,7 @@ const onDelete= ()=>{
         >
           {log.message}
         </a>
-        <br />
+        <br/>
         <span>
           #{log.id} Last updated by {log.developer} on
           <moment formate="mmmm do yyyy, h:mm:ss a"> </moment> {log.date}

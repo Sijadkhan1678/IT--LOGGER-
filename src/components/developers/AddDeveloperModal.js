@@ -53,12 +53,14 @@ const onSubmit=()=>{
         <a href='#!' onClick={onSubmit} className='modal-close waves-effect waves-blue btn-flat'>Submit </a>
         </div>
         </div>
+        </div>
+     
         
         )
         
         }
         
         export default AddDeveloperModal;
-}
+
 
 

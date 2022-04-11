@@ -3,9 +3,7 @@ import M from 'materialize-css/dist/js/materialize/min.js';
 
 
 
-const EditLogModal= ()=>{
-
-
+const EditLogModal= () => {
 
      const [message,setMessage]=useState('');
      const [attention,setAttention]=useState('');
@@ -14,22 +12,21 @@ const EditLogModal= ()=>{
      const onSubmit=()=>{
      if(message==='' && developer===''){
      
-     M.toast({html:'please enter values for message and developer'})
+     M.toast({html:'Updated Log'})
      }
-     else
-     {
+     else{
      
      console.log(message,attention,developer);
      setMessage('');
      setDeveloper('');
      setAttention(false)
-     
-     }
-     }
+
+              }
+         }
 
         return(
 
-        <div id='edit-log-modal' className='modal'>
+        <div id='#edit-log-modal' className='modal'>
         <div className='modal-content'>
         <h4>Edit Developer Log </h4>
         <div className='row'>

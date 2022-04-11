@@ -1,6 +1,6 @@
 
 
-import { GET_LOGS, ADD_LOG,DELETE_LOG,SET_LOADING,LOG_ERROR} from './types';
+import { GET_LOGS, ADD_LOG,DELETE_LOG,SET_LOADING,LOG_ERROR,SET_CURRENT,CLEAR_CURRENT} from './types';
 
 
 // getLogs function
@@ -88,6 +88,23 @@ const data = await res.json();
  }
 }
 
+// set current Function
+
+const setCurrent = log => {
+  return{
+    type: SET_CURRENT,
+    payload: log
+  }
+}
+
+// clear Current 
+
+const clearCurrent = () =>{
+
+  return  {type: CLEAR_CURRENT}
+  
+}
+
 
 export const deleteLog= id => async dispatch => {
 
@@ -107,6 +124,7 @@ export const deleteLog= id => async dispatch => {
    
 
   }}
+
 
   // loading action
 

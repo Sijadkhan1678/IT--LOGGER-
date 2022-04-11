@@ -22,10 +22,10 @@ if(loading || logs=== null){
       <li className="collection-header">
         <h4 className="text-center"> Developer Logs </h4>
       </li>
-      {!loading && logs.length === 0 ? (
+      {!loading && logs.length === null ? (
         <p>there are currently no developer</p>
       ) : (
-        logs.map((log) =><div> <LogItem key={log.id} log={log} /></div>)
+        logs.map( log => <div> <LogItem key={log.id} log={log} /> </div>)
       )}
     </ul>
   );

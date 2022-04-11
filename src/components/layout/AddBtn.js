@@ -14,16 +14,17 @@ return (
    <a href='#developer-list-modal' className='btn-floating green modal-trigger'> 
    <i className='materialize-icons'>person </i>
    </a> 
-    <li>
+    </li>
    <li>
    <a href='#developer-modal' className='btn-floating red modal-trigger'> 
    
    <i className='materialize-icons'>person_add</i> 
    
    </a>  
-    <li>
+    </li>
    </ul>
     </div>
+    
     )
 
 }
