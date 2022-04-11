@@ -5,6 +5,8 @@ import M from 'materialize-css/dist/js/materialize/min.js';
 
 const EditLogModal= ()=>{
 
+
+
      const [message,setMessage]=useState('');
      const [attention,setAttention]=useState('');
      const [developer,setDeveloper]=useState('');
@@ -26,6 +28,7 @@ const EditLogModal= ()=>{
      }
 
         return(
+
         <div id='edit-log-modal' className='modal'>
         <div className='modal-content'>
         <h4>Edit Developer Log </h4>
@@ -71,12 +74,10 @@ const EditLogModal= ()=>{
         <a href='#!' onClick={onSubmit} className='modal-close waves-effect waves-blue btn-flat'>Submit </a>
         </div>
         </div>
-        
+        </div>
+        </div>
         )
         
         }
         
         export default EditLogModal;
-}
-
-

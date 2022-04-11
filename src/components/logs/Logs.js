@@ -34,7 +34,7 @@ if(loading || logs=== null){
 Logs.propTypes = {
 
 log : propTypes.object.isRequired,
-getLods : propTypes.func.isRequired
+getLogs : propTypes.func.isRequired
 }
 const mapStateToProps= state =>({
  log: state.log
