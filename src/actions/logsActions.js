@@ -6,11 +6,13 @@ import { GET_LOGS, ADD_LOG,DELETE_LOG,SET_LOADING,LOG_ERROR,SET_CURRENT,CLEAR_CU
 // getLogs function
 
 export const getLogs= () => async dispatch => {
+
 try{
    
 const res = await fetch('http://localhost:8000/logs');
+
      const data= await res.json();             
-     console.log(data)
+     
     dispatch({
     
             type: GET_LOGS,
@@ -90,7 +92,7 @@ const data = await res.json();
 
 // set current Function
 
-const setCurrent = log => {
+export  const setCurrent = log => {
   return{
     type: SET_CURRENT,
     payload: log
@@ -99,7 +101,7 @@ const setCurrent = log => {
 
 // clear Current 
 
-const clearCurrent = () =>{
+export const clearCurrent = () =>{
 
   return  {type: CLEAR_CURRENT}
   

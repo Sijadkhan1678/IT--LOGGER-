@@ -1,5 +1,6 @@
 import React from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
+import Moment from 'react-moment';
 import propTypes from 'prop-types';
 import {deleteLog} from '../../actions/logsActions';
 import {connect} from 'react-redux';
@@ -7,7 +8,7 @@ import {connect} from 'react-redux';
 const LogItem = ({ log }) => {
 
 const onDelete= ()=>{
-
+ console.log(log)
   deleteLog(log)
   M.toast({html: 'Log deleted'})
 
@@ -26,10 +27,10 @@ const onDelete= ()=>{
         <br/>
         <span>
           #{log.id} Last updated by {log.developer} on
-          <moment formate="mmmm do yyyy, h:mm:ss a"> </moment> {log.date}
+          <Moment formate="mmmm do yyyy, h:mm:ss a"> </Moment> {log.date}
         </span>
         <a href="#!" className="secondary-content">
-          <i className="materializ-icons danger-text" onClick={onDelete} >delete</i>
+          <i className="material-icons danger-text" onClick={onDelete} >delete</i>
         </a>
       </div>
     </li>

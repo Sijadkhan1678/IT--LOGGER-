@@ -10,6 +10,7 @@ const Logs = ({log:{logs,loading},getLogs}) => {
 
   useEffect(() => {
     getLogs();
+    //eslint-disable-nextline
   }, []);
 
 if(loading || logs=== null){
@@ -25,7 +26,7 @@ if(loading || logs=== null){
       {!loading && logs.length === null ? (
         <p>there are currently no developer</p>
       ) : (
-        logs.map( log => <div> <LogItem key={log.id} log={log} /> </div>)
+        logs.map( log =>  <LogItem key={log.id} log={log} /> )
       )}
     </ul>
   );

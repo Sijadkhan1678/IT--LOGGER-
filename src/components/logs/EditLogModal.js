@@ -26,7 +26,7 @@ const EditLogModal= () => {
 
         return(
 
-        <div id='#edit-log-modal' className='modal'>
+        <div id='edit-log-modal' className='modal'>
         <div className='modal-content'>
         <h4>Edit Developer Log </h4>
         <div className='row'>
